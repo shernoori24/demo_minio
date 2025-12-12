@@ -48,7 +48,9 @@ services:
   # PRODUCER kafka / from JSON to KAFKA
   # ---------------------------------------------------
   producer:
-    build: ./docker-kafka/producer
+    build:
+      context: .
+      dockerfile: docker-kafka/producer/Dockerfile
     environment:
       KAFKA_BOOTSTRAP: kafka:9092
       KAFKA_TOPIC: events
