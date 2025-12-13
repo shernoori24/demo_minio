@@ -7,7 +7,7 @@ spark = (
     .appName("KafkaToMinIO")
     .config(
         "spark.jars.packages",
-        "org.apache.spark-sql-kafka-0-10_2.12-3.4.0")
+        "org.apache.spark:spark-sql-kafka-0-10_2.12:3.4.0")
     .config("spark.hadoop.fs.s3a.endpoint", "http://minio:9000")
     .config("spark.hadoop.fs.s3a.access.key", "admin")
     .config("spark.hadoop.fs.s3a.secret.key", "admin123")
